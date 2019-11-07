@@ -2,7 +2,7 @@ class Spaceship extends Floater
 {   
     //your code here
     public Spaceship(){
-    	corners = 3
+    	corners = 3;
     	xCorners = new int[corners];
     	yCorners = new int[corners];
     	xCorners[0] = -8;
@@ -10,6 +10,15 @@ class Spaceship extends Floater
     	xCorners[1] = 16;
     	yCorners[1] = 0;
     	xCorners[2] = -8;
-    	yCorners[2] = -8;
+    	yCorners[2] = 8;
+    	myColor = 255;
+    	myCenterX = 250;
+    	myCenterY = 250;
+    	myDirectionX = 0;
+    	myDirectionY = 0;
+    	myPointDirection = 0;
     }
+
+
+
 }
