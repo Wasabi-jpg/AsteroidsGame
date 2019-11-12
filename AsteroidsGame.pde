@@ -3,14 +3,14 @@ public void setup()
 {
   //your code here
   size (500,500);
+  background(0);
 
   
 }
 public void draw() 
 {
   //your code here
-  fill(0,0,0,25);
-  rect(0,0,500,500);
+
   a.show();
   a.move();
  
