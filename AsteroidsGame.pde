@@ -14,7 +14,7 @@ public void setup()
 public void draw() 
 {
   //your code here
-  fill(0,0,0,25);
+  fill(0,0,0,250);
   rect(0,0,500,500);
   
   for(int i = 0; i<b.length;i++){
@@ -31,10 +31,10 @@ public void keyPressed(){
 	a.accelerate(0.5);
 	}
 	if(key == 'a'){
-		a.turn(-15);
+		a.turn(-10);
 	}
 	if(key == 'd'){
-		a.turn(15);
+		a.turn(10);
 	}
 	if(key == 's'){
 		a.accelerate(-0.5);
@@ -44,7 +44,7 @@ public void keyPressed(){
 		a.setmyDirectionY(0);
 		a.setmyCenterX((Math.random()*500)+1);
 		a.setmyCenterY((Math.random()*500)+1);
-		//a.setmyPointDirection(Math.random()*2*PI);
+		a.setmyPointDirection(Math.random()*361);
 	}
 	
 }
