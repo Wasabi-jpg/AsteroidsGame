@@ -6,6 +6,9 @@ class Asteroid extends Floater
 	myColor = 127;
 	myCenterX = 250;
 	myCenterY = 250;
+	myDirectionX = 0;
+	myDirectiony = 0;
+	
 
 
 
