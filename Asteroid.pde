@@ -19,15 +19,12 @@ class Asteroid extends Floater
 	public void setmyDirectionY(double y){
 		myDirectionY = y;
 	}
-	public void setmyPointDirection(double p){
-		myPointDirection = p;
-	}
 	public void move(){
 		turn(rotSpeed);
 		super.move();
-		setmyDirectionX((Math.random()*5)-2);
-		setmyDirectionY((Math.random()*5)-2);
-		setmyPointDirection(Math.random()*361);
+		setmyDirectionX((Math.random()*3));
+		setmyDirectionY((Math.random()*3));
+		
 
 	}
 	

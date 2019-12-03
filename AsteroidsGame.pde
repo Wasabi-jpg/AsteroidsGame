@@ -1,6 +1,6 @@
 Star [] b = new Star[100];
 Spaceship a = new Spaceship();//your variable declarations here
-ArrayList <Integer> Asteroid = new ArrayList <Integer>();
+//ArrayList <Asteroid> a = new ArrayList <Asteroid>();
 Asteroid c = new Asteroid();
 public void setup() 
 {
