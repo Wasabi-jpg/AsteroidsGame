@@ -1,6 +1,6 @@
 Star [] b = new Star[100];
 Spaceship a = new Spaceship();//your variable declarations here
-//ArrayList <Asteroid> d = new ArrayList <Asteroid>();
+ArrayList <Asteroid> d = new ArrayList <Asteroid>();
 Asteroid c = new Asteroid();
 public void setup() 
 {
@@ -11,7 +11,7 @@ public void setup()
   }
   
   for(int i = 0; i <5;i++){
-  	d.add(i,c);
+  	d.add(new Asteroid());
   }
 
   
@@ -30,6 +30,10 @@ public void draw()
   a.move();
   c.show();
   c.move();
+  for(int i = 0; i < d.size();i++){
+  	d.show(get(i));
+  	d.move(get(i));
+  }
 
  
   
