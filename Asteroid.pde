@@ -21,12 +21,12 @@ class Asteroid extends Floater
 		super.move();
 		
 	}
-	public double getMyCenterX(){
-		return (float)myCenterX;
+	public float getmyCenterX(){
+		return (float) myCenterX;
 
 	}
-	public double getMyCenterY(){
-		return (float)myCenterY;
+	public float getmyCenterY(){
+		return (float) myCenterY;
 
 	}
 

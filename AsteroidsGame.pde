@@ -12,7 +12,7 @@ public void setup()
   	b[i] = new Star();
   }
   //asteroids setup
-  for(int i = 0; i <5;i++){
+  for(int i = 0; i <10;i++){
   	d.add(new Asteroid());
   	d.get(i).accelerate(2);
   }
@@ -38,7 +38,7 @@ public void draw()
   for(int i = 0; i < d.size();i++){
   	d.get(i).show();
   	d.get(i).move();
-  	if(dist(d.get(i).getMyCenterX(),d.get(i).getMyCenterY(),a.getMyCenterX(),a.getMyCenterY())<2){
+  	if(dist(d.get(i).getmyCenterX(),d.get(i).getmyCenterY(),a.getmyCenterX(),a.getmyCenterY())<=10){
   		d.remove(i);
   		i--;
   	}
