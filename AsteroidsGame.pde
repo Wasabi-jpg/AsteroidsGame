@@ -3,6 +3,7 @@ Star [] b = new Star[100];
 Spaceship a = new Spaceship();//your variable declarations here
 ArrayList <Asteroid> d = new ArrayList <Asteroid>();
 //Asteroid c = new Asteroid();
+Bullet e = new Bullet(a);
 public void setup() 
 {
   //your code here
@@ -45,6 +46,7 @@ public void draw()
   }
 
 
+
  
   
 }
@@ -70,4 +72,10 @@ public void keyPressed(){
 		a.setmyPointDirection(Math.random()*361);
 	}
 	
+}
+public void keyReleased(){
+	if(key == ' '){
+		e.show();
+		e.move();
+	}
 }
