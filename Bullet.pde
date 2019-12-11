@@ -15,4 +15,10 @@ class Bullet extends Floater
 		ellipse((float)myCenterX,(float)myCenterY,10,10);
 		super.show();
 	}
+	public float getmyCenterX(){
+		return (float) myCenterX;
+	}
+	public float getmyCenterY(){
+		return (float) myCenterY;
+	}
 }

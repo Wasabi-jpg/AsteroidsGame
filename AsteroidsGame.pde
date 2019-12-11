@@ -3,7 +3,8 @@ Star [] b = new Star[100];
 Spaceship a = new Spaceship();//your variable declarations here
 ArrayList <Asteroid> d = new ArrayList <Asteroid>();
 //Asteroid c = new Asteroid();
-Bullet e = new Bullet(a);
+//Bullet e = new Bullet(a);
+ArrayList <Bullet> e = new ArrayList <Bullet>();
 public void setup() 
 {
   //your code here
@@ -44,11 +45,16 @@ public void draw()
   		i--;
   	}
   }
+  for(int i =0; i<e.size();i++){
+  	e.get(i).show();
+	e.get(i).move();
+	}
+  //colision btwn bullet and asteroid
+  for(int i = 0; i<e.size();i++){
 
 
-
- 
-  
+  }
+  	
 }
 //spaceship motion keys
 public void keyPressed(){
@@ -71,11 +77,9 @@ public void keyPressed(){
 		a.setmyCenterY((Math.random()*500)+1);
 		a.setmyPointDirection(Math.random()*361);
 	}
+	if(key == ' '){
+		e.add(new Bullet(a));
+	}
 	
 }
-public void keyReleased(){
-	if(key == ' '){
-		e.show();
-		e.move();
-	}
-}
+
