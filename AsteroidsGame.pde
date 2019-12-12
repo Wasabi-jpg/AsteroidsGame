@@ -5,6 +5,7 @@ ArrayList <Asteroid> d = new ArrayList <Asteroid>();
 //Asteroid c = new Asteroid();
 //Bullet e = new Bullet(a);
 ArrayList <Bullet> e = new ArrayList <Bullet>();
+int health = 3;
 public void setup() 
 {
   //your code here
@@ -24,7 +25,7 @@ public void setup()
 public void draw() 
 {
   //your code here
-  fill(0,0,0,250);
+  fill(0,0,0,255);
   rect(0,0,500,500);
 
   //star background display
@@ -40,21 +41,58 @@ public void draw()
   for(int i = 0; i < d.size();i++){
   	d.get(i).show();
   	d.get(i).move();
+  	textSize(32);
+	fill(255,0,0);
+	text("Health:" + health, 370,30);
+	if(health<=0){
+		textSize(100);
+		fill(255,0,0);
+		text("GAME",50,200);
+		textSize(100);
+		fill(255,0,0);
+		text("OVER",50,275);
+	}
   	if(dist(d.get(i).getmyCenterX(),d.get(i).getmyCenterY(),a.getmyCenterX(),a.getmyCenterY())<=10){
   		d.remove(i);
   		i--;
+  		health--;
+  	}
+  	for(int j = 0; j < e.size();j++){
+  		if(dist(d.get(i).getmyCenterX(),d.get(i).getmyCenterY(),e.get(j).getmyCenterX(),e.get(j).getmyCenterY())<=10){
+  			d.remove(i);
+  			e.remove(j);
+  			i--;
+
+  			break;
+  		}
+
   	}
   }
   for(int i =0; i<e.size();i++){
   	e.get(i).show();
 	e.get(i).move();
+	if(e.get(i).getmyCenterX()>=500){
+		e.remove(i);
+		i--;
 	}
-  //colision btwn bullet and asteroid
-  for(int i = 0; i<e.size();i++){
+	else if(e.get(i).getmyCenterX()<=0){
+		e.remove(i);
+		i--;
+	}
+	else if(e.get(i).getmyCenterY()>=500){
+		e.remove(i);
+		i--;
+	}
+	else if(e.get(i).getmyCenterY()<=0){
+		e.remove(i);
+		i--;
+	}
+	}
 
 
-  }
-  	
+
+	
+  
 }
 //spaceship motion keys
 public void keyPressed(){
