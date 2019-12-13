@@ -44,18 +44,19 @@ public void draw()
   	textSize(32);
 	fill(255,0,0);
 	text("Health:" + health, 370,30);
-	if(health<=0){
+	if(health==0||health<=0){
 		textSize(100);
 		fill(255,0,0);
-		text("GAME",50,200);
+		text("GAME",125,200);
 		textSize(100);
 		fill(255,0,0);
-		text("OVER",50,275);
+		text("OVER",125,275);
 	}
   	if(dist(d.get(i).getmyCenterX(),d.get(i).getmyCenterY(),a.getmyCenterX(),a.getmyCenterY())<=10){
   		d.remove(i);
   		i--;
   		health--;
+  		break;
   	}
   	for(int j = 0; j < e.size();j++){
   		if(dist(d.get(i).getmyCenterX(),d.get(i).getmyCenterY(),e.get(j).getmyCenterX(),e.get(j).getmyCenterY())<=10){
